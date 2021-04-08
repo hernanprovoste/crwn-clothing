@@ -11,22 +11,28 @@ const sections = [
   },
   {
     title: "jackets",
-    imageUrl: "https://www.freeimages.com/photo/zip-1426414",
+    imageUrl:
+      "https://images.freeimages.com/images/large-previews/85f/zip-1426414.jpg",
     id: 2,
   },
   {
     title: "sneakers",
-    imageUrl: "https://www.freeimages.com/photo/sole-1427179",
+    imageUrl:
+      "https://images.freeimages.com/images/large-previews/bd5/sole-1427179.jpg",
     id: 3,
   },
   {
     title: "womens",
-    imageUrl: "https://www.freeimages.com/photo/laundry-1196263",
+    imageUrl:
+      "https://images.freeimages.com/images/large-previews/81d/laundry-1196263.jpg",
+    size: "large",
     id: 4,
   },
   {
     title: "mens",
-    imageUrl: "https://www.freeimages.com/photo/jacket-button-1-1487126",
+    imageUrl:
+      "https://images.freeimages.com/images/large-previews/c90/jacket-button-1-1487126.jpg",
+    size: "large",
     id: 5,
   },
 ];
@@ -34,8 +40,8 @@ const sections = [
 const Directory = () => {
   return (
     <div className="directory-menu">
-      {sections.map(({ title, imageUrl, id }) => (
-        <MenuItem key={id} title={title} />
+      {sections.map(({ title, imageUrl, id, size }) => (
+        <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
       ))}
     </div>
   );
